@@ -1,0 +1,21 @@
+label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+span{
+    font-size: 1.05rem;
+}
+
+input{
+    padding: 7px 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+input:focus{
+    outline: 1px solid #add9e5a1;
+}
