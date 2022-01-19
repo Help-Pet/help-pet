@@ -1,0 +1,39 @@
+main{
+    padding: 40px 40px 50px 40px;
+}
+
+.h1{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+main p{
+    margin-bottom: 5px;
+}
+
+main form{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: auto;
+    padding: 60px 0px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.btn__enviar{
+    width: 200px;
+    text-align: center;
+    background-color: #008000;
+    color: #fff;
+    border: transparent;
+    outline: transparent;
+    transition: 0.2s ease-in-out background-color;
+}
+
+.btn__enviar:hover{
+    background-color: #026b02;
+}

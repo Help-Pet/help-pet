@@ -1,0 +1,67 @@
+header{
+    background-color: #5CE1E6;
+    height: 100px;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+    border-bottom: 2px solid #F4AD17;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+}
+
+header div img{
+    width: 120px;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+}
+
+header ul{
+    display: flex;
+    align-items: center;
+}
+
+.link{
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1rem;
+    box-sizing: border-box;
+    padding: 10px;
+    transform: translateY(6px);
+}
+
+.link:hover{
+    border-bottom: 2px solid #222;
+    color: #000;
+}
+
+.linkDoacao{
+    margin-right: 10px;
+}
+
+.linkContato{
+    background-color: #222;
+    text-align: center;
+    color: #fff;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px rgba(15, 15, 15, 0.377);
+    transition: 0.3s ease-in-out color;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transform: translateY(5px);
+}
+
+.linkContato:hover{
+    border-bottom: none;
+    color: #008000;
+}

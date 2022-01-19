@@ -1,0 +1,11 @@
+.carrosel{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.carrosel__image{
+   width: 100%;
+    padding: 0;
+    margin: 0;
+} 
