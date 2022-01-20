@@ -6,7 +6,7 @@ import styles from "../styles/Contato.module.css";
 export default function Contact(){
     return(
         <main>
-            <h1>Contato</h1>
+            <h1 className={styles.h1}>Formulário de Contato</h1>
             <form>
                 <Input text="Nome" type="text" name="txtnome" placeH="Digite seu nome" />
                 <Input text="Email" type="email" name="txtemail" placeH="Digite seu e-mail" />

@@ -15,3 +15,15 @@
     margin: auto 0;
     place-items: center;
 }
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.btnVermais{
+    background-color: #008000;
+    color: #fff;
+    padding: 6px 15px;
+    border-bottom: 2px solid #015e01;
+}

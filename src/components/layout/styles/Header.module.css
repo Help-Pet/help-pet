@@ -53,7 +53,7 @@ header ul{
     color: #fff;
     border-radius: 6px;
     box-shadow: 2px 2px 5px rgba(15, 15, 15, 0.377);
-    transition: 0.3s ease-in-out color;
+    transition: 0.3s ease-in-out color box-shadow;
     padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
@@ -63,5 +63,5 @@ header ul{
 
 .linkContato:hover{
     border-bottom: none;
-    color: #008000;
+    box-shadow: 3px 3px 6px rgba(15, 15, 15, 0.377);
 }

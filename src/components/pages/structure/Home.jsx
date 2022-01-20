@@ -35,6 +35,9 @@ export default function Home(){
                    <Dog src={dog8} alt="imagem cachorro 8" nome="Kaysar" descricao="Fêmea de porte grande" />
                    <Dog src={dog9} alt="imagem cachorro 9" nome="Mary" descricao="Fêmea de porte pequeno" />
                </div>
+               <div className={styles.button}>
+                   <input className={styles.btnVermais} type="submit" value="VER MAIS" />
+               </div>
            </section>
         </main>
     )
