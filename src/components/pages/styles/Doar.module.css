@@ -1,0 +1,24 @@
+.p{
+    margin-bottom: 15px;
+}
+
+.container__doacao{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+}
+
+.container__doacao__doar{
+    width: 44vw;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px rgba(192, 189, 189, 0.438);
+    min-height: 350px;
+    padding: 15px;
+}
+
+.h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}

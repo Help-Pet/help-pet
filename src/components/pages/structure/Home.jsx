@@ -1,7 +1,6 @@
 import React from "react";
 
 import Carrosel from "../../project/structure/Carrosel";
-import Input from "../../project/structure/Input";
 import Dog from "../../project/structure/Dog";
 import styles from "../styles/Home.module.css";
 

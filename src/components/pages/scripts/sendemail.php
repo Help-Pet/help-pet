@@ -2,6 +2,7 @@
   //Variáveis do formulário.
   $nome = $_POST['nome'];
   $seuemail = $_POST['email'];
+  $assunto = $_POST['assunto'];
   $mensagem = $_POST['mensagem'];
   $data_envio = date('d/m/Y');
   $hora_envio = date('H:i:s');
@@ -34,6 +35,7 @@
     <html>
       <p><b>Nome: </b> $nome </p>
       <p><b>E-mail: </b> $seuemail </p>
+      <p><b>Assunto: </b> $assunto </p>
       <p><b>Mensagem: </b> $mensagem </p>
       <p>Este e-mail foi enviado em <b>$data_envio</b> às <b>$hora_envio</b></p>
     </html>"; //Corpo de mensagem do -email.
@@ -59,5 +61,5 @@
     echo 'Falha ao enviar: ' . $email->ErrorInfo;
   }
 
-  echo "<meta http-equiv='refresh' content='10;URL=../structure/Contato.html'>"; //Redireciona a página de contato.
+  echo "<meta http-equiv='refresh' content='10;URL=../structure/Contato.jsx'>"; //Redireciona a página de contato.
 ?>

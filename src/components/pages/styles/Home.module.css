@@ -24,6 +24,7 @@
 .btnVermais{
     background-color: #008000;
     color: #fff;
+    width: 150px;
     padding: 6px 15px;
     border-bottom: 2px solid #015e01;
 }
