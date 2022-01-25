@@ -1,6 +1,5 @@
 footer{
     display: flex;
-    flex-direction: column;
     background-color: #ddd;
     padding: 50px 20px;
 }
@@ -90,4 +89,52 @@ footer ul li{
     color: #fff;
     padding: 3px;
     border-radius: 5px;
+}
+
+/* responsividade mobile */
+
+@media (max-width: 768px) {
+    footer{
+        padding: 50px 0px 0px 0px;
+    }
+
+    .first__container{
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .first__container__logo{
+        width: 100%;
+        margin-bottom: 40px;
+        padding: 0px 20px;
+    }
+
+    .first__container__logo img{
+        width: 160px;
+    }
+
+    .first__container__logo p{
+        min-width: none;
+        max-width: none;
+        width: 100%;
+    }
+
+    .first__container__links{
+        width: 100%;
+        margin-bottom: 60px;
+        padding: 0px 20px;
+    }
+
+    .first__container__social{
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon{
+        font-size: 2rem;
+        margin: 10px;
+    }
 }

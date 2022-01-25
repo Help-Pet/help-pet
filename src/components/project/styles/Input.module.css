@@ -14,8 +14,16 @@ input{
     border-radius: 7px;
     font-size: 0.95rem;
     color: #333;
+    width: 100%;
 }
 
 input:focus{
     outline: 1px solid #add9e5a1;
+}
+
+/* responsividade mobile */
+@media (max-width: 768px){
+    input{
+        width: 100%;
+    }
 }

@@ -13,7 +13,7 @@ textarea{
 }
 
 textarea:focus{
-    border: #add9e5a1;
+    outline: #add9e5a1;
 }
 
 .button{
@@ -31,4 +31,13 @@ textarea:focus{
 
 .btnEnviar:hover{
     background-color: #026b02;
+}
+
+/* responsividade mobile */
+
+@media (max-width: 768px) {
+    .btnEnviar{
+        width: 70%;
+        margin: 30px 0px;
+    }
 }

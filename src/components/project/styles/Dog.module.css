@@ -50,3 +50,19 @@
 .btn__verPerfil:hover{
     background-color: #026b02;
 }
+
+/* responsividade mobile */
+@media (max-width: 768px) {
+    .container__cachorros__cachorro{
+        width: 47vw;
+    }
+
+    .btn__verPerfil{
+        width: 80%;
+        font-size: 0.95rem;
+    }
+
+    .img{
+        height: 180px;
+    }
+}

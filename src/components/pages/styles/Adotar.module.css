@@ -14,7 +14,7 @@ main p{
 main form{
     display: flex;
     flex-direction: column;
-    width: 700px;
+    width: 80%;
     margin: auto;
     padding: 60px 0px;
 }
@@ -36,4 +36,20 @@ main form{
 
 .btn__enviar:hover{
     background-color: #026b02;
+}
+
+/* responsividade mobile */
+
+@media (max-width: 768px) {
+    main{
+        padding: 50px 10px;
+    }
+    
+    main form{
+        width: 95%;
+    }
+
+    .btn__enviar{
+        margin: 30px 0px;
+    }
 }

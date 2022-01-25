@@ -1,6 +1,8 @@
 import React from 'react';
 
 import styles from "../styles/Doar.module.css";
+import logoBradesco from "../../../assets/imagens/bradesco.png";
+import racao from "../../../assets/imagens/racao.png"
 
 export default function Doar(){
     return(
@@ -15,9 +17,15 @@ export default function Doar(){
             <div className={styles.container__doacao}>
                 <div className={styles.container__doacao__doar}>
                     <h3 className={styles.h3}>Doe pela nossa conta bancária</h3>
+                    <img className={styles.imgBradesco} src={logoBradesco} alt="logo bradesco" />
+                    <p>Banco Bradesco</p>
+                    <p>Código XX</p>
+                    <p>Agência XXXXX</p>
+                    <p>Número XXXXXXX-X</p>
                 </div>
                 <div className={styles.container__doacao__doar}>
                     <h3 className={styles.h3}>Se preferir, doe um saco de ração por conta própria!</h3>
+                    <img className={styles.imgRacao} src={racao} alt="saco de ração" />
                     <p>Mande um email para: faleconosco.ajudeumpet@gmail.com para informamos o local de entrega.</p>
                 </div>
             </div>

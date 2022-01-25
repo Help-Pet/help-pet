@@ -4,8 +4,20 @@
     padding: 0;
 }
 
-.carrosel__image{
-   width: 100%;
-    padding: 0;
-    margin: 0;
-} 
+.iconPrev{
+    padding: 10px 5px;
+}
+
+.carrosel_image{
+    width: 100%;
+    display: block;
+}
+
+/* responsividade mobile */
+
+@media (max-width: 768px) {
+    .carrosel_image{
+        height: 200px;
+        object-fit: cover;
+    }
+}
