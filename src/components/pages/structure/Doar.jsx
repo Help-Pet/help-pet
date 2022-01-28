@@ -1,8 +1,8 @@
 import React from 'react';
 
 import styles from "../styles/Doar.module.css";
-import logoBradesco from "../../../assets/imagens/bradesco.png";
-import racao from "../../../assets/imagens/racao.png"
+import logoPicpay from "../../../assets/imagens/picpay.png";
+import qrCode from "../../../assets/imagens/qrcode.jpg";
 
 export default function Doar(){
     return(
@@ -17,16 +17,16 @@ export default function Doar(){
             <div className={styles.container__doacao}>
                 <div className={styles.container__doacao__doar}>
                     <h3 className={styles.h3}>Doe pela nossa conta bancária</h3>
-                    <img className={styles.imgBradesco} src={logoBradesco} alt="logo bradesco" />
-                    <p>Banco Bradesco</p>
-                    <p>Código XX</p>
-                    <p>Agência XXXXX</p>
-                    <p>Número XXXXXXX-X</p>
+                    <img className={styles.imgPicpay} src={logoPicpay} alt="logo pic pay" />
+                    <p>PicPay Services S.A</p>
+                    <p>Instituição 380</p>
+                    <p>Agência 0001</p>
+                    <p>Número 10471989-3</p>
                 </div>
                 <div className={styles.container__doacao__doar}>
-                    <h3 className={styles.h3}>Se preferir, doe um saco de ração por conta própria!</h3>
-                    <img className={styles.imgRacao} src={racao} alt="saco de ração" />
-                    <p>Mande um email para: faleconosco.ajudeumpet@gmail.com para informamos o local de entrega.</p>
+                    <h3 className={styles.h3}>Se preferir, doe diretamente por pix!</h3>
+                    <img className={styles.imgQrcode} src={qrCode} alt="saco de ração" />
+                    <p>Chave pix: grupomarlove@gmail.com</p>
                 </div>
             </div>
         </main> 

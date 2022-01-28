@@ -14,7 +14,7 @@ export default function Footer(){
                     <p>Somos uma organização que te ajuda a conseguir um filho de 4 patas!</p>
                 </div>
                 <div className={styles.first__container__links}>
-                    <h3>HELP PET</h3>
+                    <h3>MARLOVE</h3>
                     <ul>
                         <Link className={styles.link} to="/adotar">Adotar um pet</Link>
                         <Link className={styles.link} to="/doar">Doar alimento</Link>
@@ -22,7 +22,7 @@ export default function Footer(){
                     </ul>
                 </div>
                 <div className={styles.first__container__social}>
-                    <ul>
+                    <ul className={styles.list}>
                         <a href="#"><FaFacebook className={styles.icon}/></a>
                         <a href="#"><FaInstagram className={styles.icon} /></a>
                         <a href="#"><FaWhatsapp className={styles.icon} /></a>

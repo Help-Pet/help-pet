@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from "../styles/Carrosel.module.css";
 
-import bannerAdocao from "../../../assets/imagens/banner-adocao-desktop.jpg";
-import bannerDoacao from "../../../assets/imagens/banner-doacao-desktop.jpg";
-import bannerContato from "../../../assets/imagens/banner-contato-desktop.jpg";
+import bannerAdocao from "../../../assets/imagens/banner-adocao.png";
+import bannerDoacao from "../../../assets/imagens/banner-doacao.png";
+import bannerContato from "../../../assets/imagens/banner-contato.png";
 
 export default function Carrosel() {
     return (

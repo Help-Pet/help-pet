@@ -9,6 +9,8 @@ import Home from "./components/pages/structure/Home";
 import Contato from "./components/pages/structure/Contato";
 import Doar from "./components/pages/structure/Doar";
 import Adotar from "./components/pages/structure/Adotar";
+import Sobre from "./components/pages/structure/Sobre";
+import Parceiros from "./components/pages/structure/Parceiros";
 import NotFound from "./components/pages/structure/NotFound";
  
 export default function App() {
@@ -22,6 +24,8 @@ export default function App() {
           <Route exact path="/contato" element={<Contato />} />
           <Route exact path="/doar" element={<Doar />} />
           <Route exact path="/adotar" element={<Adotar />} />
+          <Route exact path="/sobre" element={<Sobre />} />
+          <Route exact path="/parceiros" element={<Parceiros />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 

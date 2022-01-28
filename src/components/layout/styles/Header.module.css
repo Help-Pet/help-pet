@@ -1,12 +1,12 @@
 header{
-    background-color: #5CE1E6;
+    background-color: #f8f8f8;
     height: 100px;
     padding: 0px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0px;
-    border-bottom: 2px solid #F4AD17;
+    border-bottom: 2px solid #FBB516;
 }
 
 header div{
@@ -14,7 +14,7 @@ header div{
     align-items: center;
 }
 
-header div img{
+.logo{
     width: 120px;
 }
 
@@ -43,7 +43,7 @@ header ul{
     color: #000;
 }
 
-.linkDoacao{
+.linkParceiros{
     margin-right: 10px;
 }
 
@@ -76,7 +76,6 @@ header ul{
 @media  (max-width: 768px) {
     header{
         display: flex;
-        justify-content: space-between;
         align-items: center;
         flex-direction: row-reverse;
         padding: 0px 15px;
@@ -84,8 +83,12 @@ header ul{
         overflow-x: hidden;
     }
 
-    header div img{
-        width: 80px;
+    .logo_container{
+        width: 60vw;
+    }
+
+    .logo{
+        width: 90px;
     }
     
     .navbar{
@@ -95,6 +98,7 @@ header ul{
     .cabecalho_sidebar{
         display: flex;
         align-items: center;
+        width: 40vw;
         height: 100vh;
         z-index: 2;
     }
@@ -153,10 +157,9 @@ header ul{
     }
 
     .link_icon{
-        margin-right: 15px;
-        font-size: 1.5rem;
-        transform: translateY(-3px);
-        color: rgb(30, 179, 179);
+        margin-right: 20px;
+        font-size: 1.35rem;
+        color: #4998D1;
     }
 
     .checkbox{
@@ -164,8 +167,9 @@ header ul{
     }
 
     .btn{
-        color: #000;
+        color: #222;
         font-size: 1.4rem;
+        font-weight: 300;
         transform: translateY(12px);
         z-index: 3;
     }
@@ -174,7 +178,7 @@ header ul{
         position: absolute;
         top: 10px;
         left: -30px;
-        color: red;
+        color: rgb(216, 49, 49);
         cursor: pointer;
         z-index: 3;
         font-size: 1.4rem;
@@ -184,6 +188,7 @@ header ul{
     .checkbox:checked ~ .sidebar{
         transition: ease-in-out 0.5s;
         transform: translateX(250px);
+        position: fixed;
     }
 
     .checkbox:checked ~ .label .cancel{

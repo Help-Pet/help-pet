@@ -6,12 +6,17 @@ import styles from "../styles/Contato.module.css";
 export default function Contact(){
     return(
         <main>
-            <h1 className={styles.h1}>Formulário de Contato</h1>
+            <h1>Formulário de Contato</h1>
             <form action="../scripts/sendemail.php" method="POST" enctype="multipart/form-data">
                 <Input text="Nome" type="text" id="inputNome" name="nome" placeH="Digite seu nome" />
                 <Input text="Email" type="email" id="inputEmail" name="email"  placeH="Digite seu e-mail" />
                 <Input text="Assunto" type="text" id="txtassunto" name="assunto" placeH="Informe o assunto" />
                 <textarea name="txtmessage" id="textAreaMensagem" name="mensagem" placeholder="Digite sua mensagem..."></textarea>
+                <label htmlFor="inputfile" className={styles.file}>
+                    <span>Algum arquivo? (opcional):</span>
+                    <input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
+                    <input type="file" id="inputfile" name="file" accept=".pdf, .doc, audio/*, video/*, image/*" />
+                </label>
                 <div className={styles.button}>
                     <input className={styles.btnEnviar} type="submit" value="ENVIAR MESSAGEM"/>
                 </div>
