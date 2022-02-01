@@ -7,7 +7,7 @@ export default function Contact(){
     return(
         <main>
             <h1>Formulário de Contato</h1>
-            <form action="http://localhost:8080/GitProjetoSocial/help-pet/src/components/pages/scripts/sendemail.php" method="POST" enctype="multipart/form-data">
+            <form action="http://localhost:8080/GitProjetoSocial/help-pet/src/components/pages/scripts/contato_sendemail.php" method="POST" enctype="multipart/form-data">
                 <Input text="Nome" type="text" id="inputNome" name="nome" placeholder ="Digite seu nome" />
                 <Input text="Email" type="email" id="inputEmail" name="email"  placeholder ="Digite seu e-mail" />
                 <Input text="Assunto" type="text" id="txtassunto" name="assunto" placeholder ="Informe o assunto" />
