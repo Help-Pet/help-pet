@@ -1,4 +1,9 @@
 <?php 
+  //FAZ A CONEXÃO COM BANCO DE DADOS
+  include_once 'conexao.php';
+
+
+  //ENVIAR EMAIL
   header('Access-Control-Allow-Origin: *');
   
   //Variáveis do formulário.
@@ -71,10 +76,23 @@
   $email->IsHtml(true); //Transforma o texto acima em tipo HTML.
 
   if ($email->Send()){ //Testa o envio do e-mail.
-    echo 'E-mail enviado!';
+    echo 'CADASTRO FEITO COM SUCESSO';
   } else{
     echo 'Falha ao enviar: ' . $email->ErrorInfo;
   }
+
+  //ENVIAR PARA O BANCO DE DADOS
+
+$conn = new Database();
+$conn = $conn->db_mysql();
+
+  $sql = $conn->prepare(
+      "INSERT INTO cadastroadocao(NOME, DT_NASCIMENTO, CEP, ENDERECO, BAIRRO, CIDADE, CELULAR, EMAIL, PROFISSAO, EMPRESA, FILHOS, QTD_PESSOAS,CTT1, CTT2, NOME_ANIMAL, FACEBOOK,INSTAGRAM)
+      VALUES('$_POST[txtNome]','$_POST[txtDataNascimento]','$_POST[numberCEP]','$_POST[txtEndereco]','$_POST[txtBairro]','$_POST[txtCidade]','$_POST[txtContato]','$_POST[txtProfissao]','$_POST[txtEmpresa]','$_POST[txtFilhos]','$_POST[txtPessoasResidencia]','$_POST[txtCtt1]','$_POST[txtCtt2]','$_POST[txtNomeAnimal]','$_POST[txtRespVerificacao]','$_POST[txtLinkFacebook]','$_POST[txtLinkInstagram]')"
+      );
+  $sql->execute();
+
+
 
   echo "<meta http-equiv='refresh' content='1;URL=http://localhost:3000/adotar'>"; //Redireciona a página de contato.
 ?>
