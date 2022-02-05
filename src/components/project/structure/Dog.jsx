@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Input from '../../project/structure/Input';
 import styles from "../styles/Dog.module.css";
 
 export default function Dog({src, alt, nome, descricao, link}) {

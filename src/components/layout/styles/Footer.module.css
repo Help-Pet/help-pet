@@ -65,7 +65,7 @@ footer ul li{
 }
 
 .link:hover{
-    color: #eee;
+    color: #d6d6d6;
 }
 
 .first__container__social{
@@ -86,7 +86,7 @@ footer ul li{
 
 .icon:hover{
     background-color: #fff;
-    color: #000;
+    color: #4998D1;
     padding: 3px;
     border-radius: 5px;
 }
