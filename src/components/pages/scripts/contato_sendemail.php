@@ -1,7 +1,10 @@
-<?php
+<?php 
+  header('Access-Control-Allow-Origin: *');
+  
   //Variáveis do formulário.
   $nome = $_POST['nome'];
   $seuemail = $_POST['email'];
+  $assunto = $_POST['assunto'];
   $mensagem = $_POST['mensagem'];
   $data_envio = date('d/m/Y');
   $hora_envio = date('H:i:s');
@@ -28,7 +31,7 @@
 
   $email->setFrom($email->Username, $nome);
   $email->AddAddress('alimenteumpetdw@gmail.com'); //E-mail do destino.
-  $email->Subject = 'Contato pelo Site'; //Assunto do e-mail.
+  $email->Subject = "Contato pelo Site - $assunto"; //Assunto do e-mail.
 
   $email->Body = "
     <html>
@@ -59,5 +62,5 @@
     echo 'Falha ao enviar: ' . $email->ErrorInfo;
   }
 
-  echo "<meta http-equiv='refresh' content='10;URL=../structure/Contato.jsx'>"; //Redireciona a página de contato.
+  echo "<meta http-equiv='refresh' content='1;URL=http://localhost:3000/contato'>"; //Redireciona a página de contato.
 ?>
