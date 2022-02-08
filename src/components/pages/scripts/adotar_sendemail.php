@@ -75,24 +75,31 @@
     </html>"; //Corpo de mensagem do -email.
   $email->IsHtml(true); //Transforma o texto acima em tipo HTML.
 
-  if ($email->Send()){ //Testa o envio do e-mail.
-    echo 'CADASTRO FEITO COM SUCESSO';
+   //ENVIAR PARA O BANCO DE DADOS
+
+  $conn = new Database();
+  $conn = $conn->db_mysql();
+
+    $sql = $conn->prepare(
+        "INSERT INTO cadastroadocao(NOME, DT_NASCIMENTO, CEP, ENDERECO, BAIRRO, CIDADE, CELULAR, EMAIL, PROFISSAO, EMPRESA, FILHOS, QTD_PESSOAS,CTT1, CTT2, NOME_ANIMAL, FACEBOOK,INSTAGRAM)
+        VALUES('$_POST[txtNome]','$_POST[txtDataNascimento]','$_POST[numberCEP]','$_POST[txtEndereco]','$_POST[txtBairro]','$_POST[txtCidade]','$_POST[txtContato]','$_POST[txtProfissao]','$_POST[txtEmpresa]','$_POST[txtFilhos]','$_POST[txtPessoasResidencia]','$_POST[txtCtt1]','$_POST[txtCtt2]','$_POST[txtNomeAnimal]','$_POST[txtRespVerificacao]','$_POST[txtLinkFacebook]','$_POST[txtLinkInstagram]')"
+        );
+    $sql->execute();
+    $a = $sql->setFetchMode(\PDO::FETCH_ASSOC);
+
+  if ($email->Send() && $a == true){ //Testa o envio do e-mail.
+    // echo 'CADASTRO FEITO COM SUCESSO';
+    header('Location: http://localhost:3000/adotar?mssg=true');
   } else{
-    echo 'Falha ao enviar: ' . $email->ErrorInfo;
+    // echo 'Falha ao enviar: ' . $email->ErrorInfo;
+    header('Location: http://localhost:3000/adotar?mssg=false');
+
   }
 
   //ENVIAR PARA O BANCO DE DADOS
 
-$conn = new Database();
-$conn = $conn->db_mysql();
-
-  $sql = $conn->prepare(
-      "INSERT INTO cadastroadocao(NOME, DT_NASCIMENTO, CEP, ENDERECO, BAIRRO, CIDADE, CELULAR, EMAIL, PROFISSAO, EMPRESA, FILHOS, QTD_PESSOAS,CTT1, CTT2, NOME_ANIMAL, FACEBOOK,INSTAGRAM)
-      VALUES('$_POST[txtNome]','$_POST[txtDataNascimento]','$_POST[numberCEP]','$_POST[txtEndereco]','$_POST[txtBairro]','$_POST[txtCidade]','$_POST[txtContato]','$_POST[txtProfissao]','$_POST[txtEmpresa]','$_POST[txtFilhos]','$_POST[txtPessoasResidencia]','$_POST[txtCtt1]','$_POST[txtCtt2]','$_POST[txtNomeAnimal]','$_POST[txtRespVerificacao]','$_POST[txtLinkFacebook]','$_POST[txtLinkInstagram]')"
-      );
-  $sql->execute();
 
 
 
-  echo "<meta http-equiv='refresh' content='1;URL=http://localhost:3000/adotar'>"; //Redireciona a página de contato.
+  // echo "<meta http-equiv='refresh' content='1;URL=http://localhost:3000/adotar'>"; //Redireciona a página de contato.
 ?>
