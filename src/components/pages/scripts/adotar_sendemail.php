@@ -19,7 +19,8 @@
   $empresa = $_POST['txtEmpresa'];
   $qntfilhos = $_POST['txtFilhos'];
   $qntpessoas = $_POST['txtPessoasResidencia'];
-  $contatoprox = $_POST['txtContatoProximo'];
+  $contato1= $_POST['txtCtt1'];
+  $contato2 = $_POST['txtCtt2'];
   $nomeanimal = $_POST['txtNomeAnimal'];
   $verificacao = $_POST['txtRespVerificacao'];
   $facebook = $_POST['txtLinkFacebook'];
@@ -65,7 +66,8 @@
       <p><b>Empresa: </b> $empresa </p>
       <p><b>Quantidade de filhos: </b> $qntfilhos </p>
       <p><b>Quantidade de pessoas na casa: </b> $qntpessoas </p>
-      <p><b>Contatos próximos: </b> $contatoprox </p>
+      <p><b>Contatos 1: </b> $contato1 </p>
+      <p><b>Contatos 2: </b> $contato2 </p>
       <p><b>Nome do animal: </b> $nomeanimal </p>
       <p><b>Verificação: </b> $verificacao </p>
       <p><b>Facebook: </b> $facebook </p>
@@ -81,8 +83,8 @@
   $conn = $conn->db_mysql();
 
     $sql = $conn->prepare(
-        "INSERT INTO cadastroadocao(NOME, DT_NASCIMENTO, CEP, ENDERECO, BAIRRO, CIDADE, CELULAR, EMAIL, PROFISSAO, EMPRESA, FILHOS, QTD_PESSOAS,CTT1, CTT2, NOME_ANIMAL, FACEBOOK,INSTAGRAM)
-        VALUES('$_POST[txtNome]','$_POST[txtDataNascimento]','$_POST[numberCEP]','$_POST[txtEndereco]','$_POST[txtBairro]','$_POST[txtCidade]','$_POST[txtContato]','$_POST[txtProfissao]','$_POST[txtEmpresa]','$_POST[txtFilhos]','$_POST[txtPessoasResidencia]','$_POST[txtCtt1]','$_POST[txtCtt2]','$_POST[txtNomeAnimal]','$_POST[txtRespVerificacao]','$_POST[txtLinkFacebook]','$_POST[txtLinkInstagram]')"
+        "INSERT INTO cadastroadocao(NOME, DT_NASCIMENTO, CEP, ENDERECO, BAIRRO, CIDADE, CELULAR, EMAIL, PROFISSAO, EMPRESA, FILHOS, QTD_PESSOAS,CTT1, CTT2, NOME_ANIMAL,CIENTE, FACEBOOK,INSTAGRAM)
+        VALUES('$_POST[txtNome]','$_POST[txtDataNascimento]','$_POST[numberCEP]','$_POST[txtEndereco]','$_POST[txtBairro]','$_POST[txtCidade]','$_POST[txtContato]', '$_POST[txtEmail]','$_POST[txtProfissao]','$_POST[txtEmpresa]','$_POST[txtFilhos]','$_POST[txtPessoasResidencia]','$_POST[txtCtt1]','$_POST[txtCtt2]','$_POST[txtNomeAnimal]','$_POST[txtRespVerificacao]','$_POST[txtLinkFacebook]','$_POST[txtLinkInstagram]')"
         );
     $sql->execute();
     $a = $sql->setFetchMode(\PDO::FETCH_ASSOC);

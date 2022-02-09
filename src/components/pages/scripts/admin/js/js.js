@@ -9,3 +9,17 @@ function artigos(){
 function usuarios(){
     window.location.href = 'criarUsuario.php'
 }
+
+function listarSolic(COD){
+     window.location.href = 'listarPorSolici.php?cod='+ COD;
+}
+
+function excluirSolic(COD){
+    var resultado = confirm("Realmente deseja excluir a solicitação de");
+    if(resultado == true){
+        window.location.href = 'listar.php?cod='+ COD;
+    }else{
+        window.location.href = 'listar.php?cod=0';
+    }
+    
+}

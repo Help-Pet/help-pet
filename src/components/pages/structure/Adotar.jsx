@@ -1,15 +1,9 @@
 import React from 'react';
 
-import { useLocation } from "react-router-dom";
-
-
 import styles from "../styles/Adotar.module.css";
 import Input from "../../project/structure/Input";
 
-const location = userLocation();
-if(location.pathname('mssg=')[1] == 'true'){
-    alert('CADASTRO FEITO COM SUSCESSO')
-}
+
 
 export default function Adotar(){
     return(
