@@ -16,10 +16,14 @@ function listarSolic(COD){
 
 function excluirSolic(COD){
     var resultado = confirm("Realmente deseja excluir a solicitação de");
-    if(resultado == true){
+    if(resultado == true && COD != 1){
         window.location.href = 'listar.php?cod='+ COD;
     }else{
-        window.location.href = 'listar.php?cod=0';
+        window.location.href = 'listar.php?';
     }
     
 }
+function sair(){
+   window.location.href = 'listar.php?cod=1';
+}
+

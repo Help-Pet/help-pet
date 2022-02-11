@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09-Fev-2022 às 20:58
+-- Tempo de geração: 11-Fev-2022 às 11:22
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 7.3.33
 
@@ -49,6 +49,13 @@ CREATE TABLE `cadastroadocao` (
   `INSTAGRAM` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `cadastroadocao`
+--
+
+INSERT INTO `cadastroadocao` (`COD_INC`, `NOME`, `DT_NASCIMENTO`, `CEP`, `ENDERECO`, `BAIRRO`, `CIDADE`, `CELULAR`, `EMAIL`, `PROFISSAO`, `EMPRESA`, `FILHOS`, `QTD_PESSOAS`, `CTT1`, `CTT2`, `NOME_ANIMAL`, `CIENTE`, `FACEBOOK`, `INSTAGRAM`) VALUES
+(20, 'Joze luiz pires da mota', '1222-12-12', '62100000', 'rua alameda jr,  n°35', '121212', 'SOBRAL', '1212121212', 'teste@gmail.com', 'DFRDFRDRF', 'sobralnet', '2 filhos 4 anos 2anos', 12, 'oneid 989898', 'jose 99999999', 'tufao', 'Sim', 'jose raimundo', 'jose raimundo');
+
 -- --------------------------------------------------------
 
 --
@@ -92,13 +99,13 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT de tabela `cadastroadocao`
 --
 ALTER TABLE `cadastroadocao`
-  MODIFY `COD_INC` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `COD_INC` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de tabela `login`
 --
 ALTER TABLE `login`
-  MODIFY `ID_USUARIO` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID_USUARIO` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

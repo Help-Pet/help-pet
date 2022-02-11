@@ -1,35 +1,42 @@
-<?php
-session_start();
-    if($_SESSION['login']=='logado'){
-        session_destroy(); 
-       
-    include_once '../conexao.php';
+    <?php
+        session_start();
+        if($_SESSION['login']=='logado'){
+        
+            include_once '../conexao.php';
+            header("Refresh:30");
+            $conn = new Database();  
+            $conn = $conn->db_mysql();
+                //query para listagem
+            $sql = $conn->prepare(
+                "SELECT * FROM cadastroadocao"
+                );
+            $sql->execute();  
+            $a=$sql->fetchAll(\PDO::FETCH_ASSOC); 
 
-   $conn = new Database();  
-   $conn = $conn->db_mysql();
-    //query para listagem
-  $sql = $conn->prepare(
-      "SELECT * FROM cadastroadocao"
-      );
-  $sql->execute();  
-  $a=$sql->fetchAll(\PDO::FETCH_ASSOC); 
+                
 
+                //query para exclusão
+                if($_GET){
+                
+                    $cod = $_GET['cod'];
 
-    //query para exclusão
-    if($_GET){
-        $cod = $_GET['cod'];
-   
-        $del = $conn->prepare(
-        "DELETE FROM cadastroadocao WHERE COD_INC = $cod"
-        );
-        $del->execute();  
-        // $b=$del->fetchAll(\PDO::FETCH_ASSOC); 
-?>
-<script>alert("Solicitação deletada com sucesso")</script>
-<?php
-    }
-
-?>
+                    if($cod!=1){
+                        $del = $conn->prepare(
+                        "DELETE FROM cadastroadocao WHERE COD_INC = $cod"
+                        );
+                        $del->execute(); 
+                        header('Location: listar.php')
+                    
+        ?>
+        <script>alert("Solicitação deletada com sucesso");</script>
+        <?php
+                    }
+                    if($cod == 1){
+                        unset($_SESSION['login']);
+                        header("Refresh:0");
+                    }
+                }
+        ?>
 <html>
     <head>
         <link rel="stylesheet" href="css/bootstrap.css">
@@ -44,10 +51,17 @@ session_start();
             <div class='col-md-12 bg-info'>
                 <CENTER><h1>SOLICITAÇÕES DE ADOÇÃO</h1><br></CENTER>
 
-                <input type="button" class='btn btn-ligth' id='listar' onclick="listar()" value="Solicitções de adoção">
-                <input type="button" class='btn btn-ligth' id='post' onclick="artigos()" value="Postar artigos">  
-                <input type="button" class='btn btn-ligth' id='criar' onclick="usuarios()" value="Criar usuário">
-         
+                <div class="row">
+                    <div class="col-md-11">
+                         <input type="button" class='btn btn-ligth' id='listar' onclick="listar()" value="Solicitções de adoção">
+                        <input type="button" class='btn btn-ligth' id='post' onclick="artigos()" value="Postar artigos">  
+                        <input type="button" class='btn btn-ligth' id='criar' onclick="usuarios()" value="Criar usuário">
+                    </div>
+
+                    <div class="col-md-1">
+                        <input type="button" class='btn btn-danger col-md-12' id='teste' onclick="sair()" value="sair">
+                    </div>
+                </div>
             </div>
         </div><br><br>
         <div class='container'>
@@ -65,6 +79,8 @@ session_start();
                             <th scope="col">FACEBOOK</th>
                             <th scope="col">INSTAGRAM</th>
                             <th scope="col">VIZUALIZAR</th>
+                            <th scope="col">EXCLUIR</th>
+
 
                             
                         </tr>
